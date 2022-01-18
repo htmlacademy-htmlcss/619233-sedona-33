@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Ламберт](https://up.htmlacademy.ru/htmlcss/33/user/619233).
-* Наставник: `Олег Цыганов`.
+* Наставник: [Олег Цыганов] (https://htmlacademy.ru/profile/olegtsyganov).
 
 ---
 
