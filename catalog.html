@@ -21,8 +21,8 @@
                     <a class="navigation-link navigation-link-current">Гостиницы</a>
                 </li>
             </ul>
-            <ul class="navigation-list navigation-user">
-                <li class="navigation-item">
+            <ul class="navigation-user">
+                <li class="navigation-item-1">
                     <a class="navigation-link" href="#"><span class="visually-hidden">Поиск</span></a>
                 </li>
                 <li class="navigation-item">
@@ -35,9 +35,9 @@
         </nav>
     </header>
     <main class="main-inner">
-        <header class="inner-header">
+        <section class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        </header>
+        </section>
 
         <section class="catalog-products">
             <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
@@ -74,18 +74,18 @@
                     <ul class="catalog-filter-list">
                         <li class="catalog-filter-item">
                             <label class="control">
-                                <input class="control-input" type="radio" name="home-group" value="hotel" checked>
+                                <input class="control-input-an" type="radio" name="home-group" value="hotel" checked>
                                 Гостиница
                             </label>
                         </li>
                         <li class="catalog-filter-item">
                             <label class="control">
-                                <input class="control-input" type="radio" name="home-group" value="motel">
+                                <input class="control-input-an" type="radio" name="home-group" value="motel">
                                 Мотель
                             </label>
                         </li>
                         <li class="catalog-filter-item">
-                            <label class="control">
+                            <label class="control-input-an">
                                 <input class="control-input" type="radio" name="home-group" value="apartments">
                                 Апартаменты
                             </label>
@@ -94,7 +94,7 @@
                 </fieldset>
 
                 <button class="button" type="submit">Применить</button>
-                <button class="button" type="submit">Сбросить</button>
+                <button class="button" type="reset">Сбросить</button>
             </form>
             <h2>Найдено гостиниц: 38</h2>
             <select class="select-control" aria-label="Сортировка">
@@ -102,7 +102,7 @@
                 <option value="expensive">Сначала дорогие</option>
                 <option value="popular">Сначала популярные</option>
             </select>
-            <a href="#" class="button">
+            <a href="#" class="button-cart">
                 <span class="visually-hidden">Показать карточки</span>
             </a>
             <a href="#" class="button button-light">
@@ -124,19 +124,19 @@
                 <a class="product-card-button button" href="#">В Избранное</a>
             </div>
             <div class="rating">
-                <div class="rating-item">1</div>>
-                <div class="rating-item">2</div>>
-                <div class="rating-item">3</div>>
-                <div class="rating-item">4</div>>
-                <div class="rating-item">5</div>>
-                </div>
+                <div class="rating-item">1</div>
+                <div class="rating-item">2</div>
+                <div class="rating-item">3</div>
+                <div class="rating-item">4</div>
+                <div class="rating-item">5</div>
+            </div>
 
             <div class="product-card">
+                <h3 class="product-card-title">Desert Quail Inn</h3>
+                <p>Гостиница</p>
+                <p>От 3000Р</p>
                 <a class="product-card-link" href="#">
                     <img class="product-card-image" src="hotel-2.jpg" width="299" height="206" alt="Desert Quail Inn">
-                    <h3 class="product-card-title">Desert Quail Inn</h3>
-                    <h4>Гостиница</h4>
-                    <h5>От 3000Р</h5>
                 </a>
                 <a class="product-card-button button" href="#">Подробнее</a>
                 <a class="product-card-button button" href="#">В Избранное</a>
@@ -149,15 +149,15 @@
                     <h3 class="product-card-title">Villas at Poco Diablo</h3>
                     <h4>Гостиница</h4>
                     <h5>От 2000Р</h5>
-            </a>
-            <a class="product-card-button button" href="#">Подробнее</a>
-            <a class="product-card-button button" href="#">В Избранное</a>
-            <div class="rating">
-                <div class="rating-item">1</div>>
-                <div class="rating-item">2</div>>
-                <div class="rating-item">3</div>>
-                <div class="rating-item">4</div>>
-                <div class="rating-item">5</div>>
+                </a>
+                <a class="product-card-button button" href="#">Подробнее</a>
+                <a class="product-card-button button" href="#">В Избранное</a>
+                <div class="rating">
+                    <div class="rating-item">1</div>>
+                    <div class="rating-item">2</div>>
+                    <div class="rating-item">3</div>>
+                    <div class="rating-item">4</div>>
+                    <div class="rating-item">5</div>>
                 </div>
             </div>
 
@@ -176,7 +176,7 @@
                     <div class="rating-item">3</div>>
                     <div class="rating-item">4</div>>
                     <div class="rating-item">5</div>>
-                    </div>
+                </div>
             </div>
 
             <button class="pagination-show-more" type="button">Загрузить ещё</button>
@@ -206,39 +206,39 @@
             <h2 class="contacts-main-white">Подпишитесь на рассылку</h2>
             <p class="contacrs-main-white-mini">Только полезная информация и никакого спама,
                 честное бойскаутское!</p>
-            <p class="email-main-form-date">
             <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label for="email-main-date">Подписаться</label>
                 <input type="text" id="email-date" name="email-date" placeholder="Ваш e-mail">
-                </p>
-
+            </form>
+        </section>
     </main>
 
     <footer class="page-footer">
-        <a class="footer-contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-        <ul class="footer-social-list">
+        <section class="contacts-footer">
+          <a class="footer-contacts-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
+          <ul class="footer-social-list">
             <li class="footer-social-item">
-                <a class="button" href="#">
-                    <span class="visually-hidden">Twitter</span>
-                </a>
+              <a class="footer-social-link" href="#">
+                <span class="visually-hidden">Twitter</span>
+              </a>
             </li>
-        </ul>
-        <ul class="footer-social-list">
+          </ul>
+          <ul class="footer-social-list">
             <li class="footer-social-item">
-                <a class="button" href="#">
-                    <span class="visually-hidden">Facebook</span>
-                </a>
+              <a class="footer-social-link" href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
-        </ul>
-        <ul class="footer-social-list">
+          </ul>
+          <ul class="footer-social-list">
             <li class="footer-social-item">
-                <a class="button" href="#">
-                    <span class="visually-hidden">Youtube</span>
-                </a>
+              <a class="footer-social-link" href="#">
+                <span class="visually-hidden">Youtube</span>
+              </a>
             </li>
-        </ul>
-        <p class="about-text">.html academy</p>
-    </footer>
-</body>
-
-</html>
+          </ul>
+          <a class="about-text" href="https://htmlacademy.ru/">.html academy</a>
+      </footer>
+    </body>
+    
+    </html>
