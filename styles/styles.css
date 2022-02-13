@@ -1,10 +1,112 @@
-
 @font-face {
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
 
 }
 
-.footer-contacts-phone { 
+@font-face {
+    font-family: "PT Sans";
     font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+body {
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.button-link-nav {
+    padding-right: 260px;
+}
+
+.page-header {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pagination-show-more {
+    text-transform: uppercase;
+}
+
+.product-card-button {
+    text-decoration: none;
+    color: #000000;
+}
+
+.rating-pic {
+    text-transform: uppercase;
+}
+
+.navigation-link {
+    font-style: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation-user-link {
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation-link-button {
+    display: block;	
+	border-radius: 4px;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	background-color: #756257;
+}
+
+.introduction-header {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.causes-title {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contacts-main-white {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.email-main-date {
+    text-transform: uppercase;
+}
+
+.contacrs-main-white-mini {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.footer-contacts-phone {
     font-size: 40px;
     line-height: 40px;
     text-decoration: none;
