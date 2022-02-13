@@ -1,23 +1,23 @@
 @font-face {
 
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 400;
-    src: url("/fonts/ptsans-400.woff2") format("woff2");
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
     font-display: swap;
 
 }
 
 @font-face {
-    font-family: "PT Sans", Arial, sans-serif;
+    font-family: "PT Sans";
     font-style: normal;
     font-weight: 700;
-    src: url("/fonts/ptsans-700.woff2") format("woff2");
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
     font-display: swap;
 }
 
 body {
-    font-family: "PT Sans";
+    font-family: "PT Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
@@ -29,7 +29,7 @@ body {
 }
 
 .page-header {
-    color: black;
+    color: #000000;
     background-color: #ffffff;
 }
 
@@ -52,13 +52,11 @@ body {
 }
 
 .navigation-link {
-    font-style: bold;
+    font-style: 700;
     font-size: 20px;
     line-height: 26px;
     color: #000000;
     text-decoration: none;
-    align: left;
-    vertical-align: top;
 }
 
 .navigation-user-link {
@@ -68,28 +66,20 @@ body {
 }
 
 .navigation-link-button {
-    display: inline-block;	
-	padding: 0 20px;
+    display: block;	
 	border-radius: 4px;
-	height: 37px;
-	line-height: 37px;
-	font-size: 14px;
-	font-weight: 160;
+	line-height: 20px;
+	font-size: 16px;
+	font-weight: 700;
 	text-decoration: none;
 	color: #fff;
 	background-color: #756257;
-	vertical-align: top;
-}
-
-.main-index {
-    color: #000000;
-    background-color: #ffffff;
-    background-repeat: no-repeat;
-    background-size: 100%;
 }
 
 .introduction-header {
-    font-size: bold;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -100,8 +90,10 @@ body {
 }
 
 .contacts-main-white {
-    font-size: bold;
-    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -110,13 +102,11 @@ body {
 }
 
 .contacrs-main-white-mini {
-    font-style: normal;
     font-size: 22px;
     line-height: 26px;
 }
 
 .footer-contacts-phone {
-    font-style: normal;
     font-size: 40px;
     line-height: 40px;
     text-decoration: none;
