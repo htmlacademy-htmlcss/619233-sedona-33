@@ -16,7 +16,14 @@
     font-display: swap;
 }
 
+html {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
@@ -26,40 +33,43 @@ body {
     padding: 0;
 }
 
+/* Контейнеры и сетки */
+
+.page-container {
+    width: 1200px;
+    margin: auto;
+}
+
+/*  Тут у меня возник вопрос о ширине блока. Самый широкий 
+элемент страницы 1200, но в фигме сама главная страница имеет widtg 1280. Что выбрать? */
+
+.causes-inside {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.about-text {
+    color: #000000;
+    text-decoration: none;
+}
+
 .button-link-nav {
     padding-right: 260px;
 }
 
-.page-header {
-    color: #000000;
-    background-color: #ffffff;
-}
 
-.product-card-link {
-    text-decoration: none;
-    color: #000000;
-}
-
-.pagination-show-more {
-    text-transform: uppercase;
-}
-
-.product-card-button {
-    text-decoration: none;
-    color: #000000;
-}
-
-.item-icons-blue {
-    background-color: #83B3D3;
+.button-visually-hidden {
     color: #ffffff;
-}
-
-.causes-item-cold {
-    background-color: rgba(131, 179, 211, 0.12);
-}
-
-.item-icons-cold {
-    background-color: rgba(131, 179, 211, 0.12);
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    background: none;
+    border: none;
 }
 
 .button-search {
@@ -71,6 +81,162 @@ body {
     height: 30px;
     line-height: 36px;
     font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background-color: #756257;
+}
+
+.causes-item-cold {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.causes-title {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contacts-main {
+    background: url("../images/mail-bg.png") no-repeat center;
+    background-size: 100%;
+}
+
+.catalog-products {
+    background: url("../images/catalog/catalog-background-up.jpg");
+    background-size: 100%;
+    color: #ffffff;
+}
+
+.contacts-main-white {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.contacrs-main-white-mini {
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.email-date {
+    text-transform: uppercase;
+    background-color: #83B3D3;
+}
+
+/* Поле "подписаться" текст на странице каталога есть, но фона нет*/
+
+.email-main-date {
+    text-transform: uppercase;
+}
+
+.footer-contacts-phone {
+    font-size: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #000000;
+    margin-top: auto;
+}
+
+.footer-social-list {
+    margin-right: auto;
+    max-width: 190px; 
+} 
+/* Не понял, как подбирается величина, если у меня будут стоять логотипы */
+
+.hotels-item {
+    display: flex;
+    margin: 16px;
+    padding: 20px;
+}
+
+.item-icons-blue {
+    background-color: #83B3D3;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.item-icons-cold {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.introduction-header {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.inner-header-title {
+    font-size: 700;
+}
+/* Текст Гостиницы Седоны в начале каталога. Как сделать его в соответствии с макетом? */
+
+.logo-html {
+    margin-left: auto;
+}
+
+ /*Не могу понять, почему свойство марджин не двигает 
+ номер телефона и логотив академии. 
+ Их нужно двигать одним свойством под общим классом для ВСЕГО футера?  */
+
+.main-container {
+    flex-grow: 1;
+}
+
+.navigation {
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.navigation-list {
+    margin: 0;
+    padding: 0;
+    width: 345px;
+}
+
+.navigation-user {
+    margin-left: auto;
+    padding: 0;
+    width: 264px;
+}
+
+.navigation-logo-sedona {
+    display: block;
+    margin: 0;
+    padding-left: 0;
+    width: 139px;
+}
+
+.navigation-link {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation-user-link {
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.navigation-link-button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 4px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
     font-weight: 700;
     text-decoration: none;
     color: #fff;
@@ -89,13 +255,33 @@ body {
     border: none;
 }
 
-.button-visually-hidden {
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 23px;
-    font-weight: 400;
-    background: none;
-    border: none;
+.ccatalog-filter {
+    display: flex;
+}
+
+.page-header {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.page-footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pagination-show-more {
+    text-transform: uppercase;
+}
+
+.product-card-button {
+    text-decoration: none;
+    color: #000000;
 }
 
 .product-card-button-brown {
@@ -137,23 +323,6 @@ body {
     height: 37px;
 }
 
-.rating-star {
-    text-transform: uppercase;
-}
-
-.rating-meaning {
-    background-color: #F2F2F2;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    width: 160px;
-    height: 37px;
-    left: 140px;
-
-}
-
 .pagination-show-more {
     text-transform: uppercase;
     background-color: #83B3D3;
@@ -184,84 +353,21 @@ body {
     color: #000000;
 }
 
-.navigation-link {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 26px;
-    color: #000000;
-    text-decoration: none;
+.rating-star {
+    text-transform: uppercase;
 }
 
-.navigation-user-link {
-    line-height: 24px;
-    color: #000000;
-    text-decoration: none;
-}
-
-.navigation-link-button {
-    display: inline-block;
-    box-sizing: border-box;
-    padding: 0 20px;
+.rating-meaning {
+    background-color: #F2F2F2;
     border-radius: 4px;
-    height: 37px;
-    line-height: 37px;
+    text-transform: uppercase;
+    font-weight: 400;
     font-size: 16px;
-    font-weight: 700;
-    text-decoration: none;
-    color: #fff;
-    background-color: #756257;
-}
+    line-height: 20px;
+    width: 160px;
+    height: 37px;
+    left: 140px;
 
-.introduction-header {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.causes-title {
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.contacts-main {
-    background: url("../images/mail-bg.png") no-repeat center;
-    background-size: 100%;
-}
-
-.catalog-products {
-    background: url("../images/catalog/catalog-background-up.jpg");
-    background-size: 100%;
-}
-
-.contacts-main-white {
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    color: #ffffff;
-    text-transform: uppercase;
-}
-
-.email-main-date {
-    text-transform: uppercase;
-}
-
-.contacrs-main-white-mini {
-    font-size: 22px;
-    line-height: 26px;
-}
-
-.footer-contacts-phone {
-    font-size: 40px;
-    line-height: 40px;
-    text-decoration: none;
-    color: #000000;
-}
-
-.about-text {
-    color: #000000;
-    text-decoration: none;
 }
 
 .sort-button {
