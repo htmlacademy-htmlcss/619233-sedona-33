@@ -16,6 +16,10 @@
     font-display: swap;
 }
 
+::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
 }
@@ -37,11 +41,9 @@ body {
 
 .page-container {
     width: 1200px;
-    margin: auto;
+    margin: 0 auto 0 auto;
 }
 
-/*  Тут у меня возник вопрос о ширине блока. Самый широкий 
-элемент страницы 1200, но в фигме сама главная страница имеет widtg 1280. Что выбрать? */
 
 .causes-inside {
     display: flex;
@@ -63,7 +65,7 @@ body {
 }
 
 
-.button-visually-hidden {
+.button-reset {
     color: #ffffff;
     font-size: 18px;
     line-height: 23px;
@@ -75,10 +77,8 @@ body {
 .button-search {
     display: inline-block;
     box-sizing: border-box;
-    padding: 0px 100px;
-    width: 575px;
+    padding: 0;
     border-radius: 4px;
-    height: 30px;
     line-height: 36px;
     font-size: 20px;
     font-weight: 700;
@@ -115,10 +115,23 @@ body {
     text-transform: uppercase;
 }
 
-.contacrs-main-white-mini {
-    font-size: 22px;
-    line-height: 26px;
+.contacts-catalog-fat {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
 }
+
+.contacrs-main-white-mini {
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* свойства не срабатывают. не понимаю, почему */
+
+
 
 .email-date {
     text-transform: uppercase;
@@ -136,13 +149,13 @@ body {
     line-height: 40px;
     text-decoration: none;
     color: #000000;
-    margin-top: auto;
 }
 
 .footer-social-list {
     margin-right: auto;
-    max-width: 190px; 
-} 
+    max-width: 190px;
+}
+
 /* Не понял, как подбирается величина, если у меня будут стоять логотипы */
 
 .hotels-item {
@@ -171,18 +184,20 @@ body {
     line-height: 36px;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .inner-header-title {
     font-size: 700;
 }
+
 /* Текст Гостиницы Седоны в начале каталога. Как сделать его в соответствии с макетом? */
 
 .logo-html {
     margin-left: auto;
 }
 
- /*Не могу понять, почему свойство марджин не двигает 
+/*Не могу понять, почему свойство марджин не двигает 
  номер телефона и логотив академии. 
  Их нужно двигать одним свойством под общим классом для ВСЕГО футера?  */
 
@@ -190,22 +205,15 @@ body {
     flex-grow: 1;
 }
 
-.navigation {
-    display: flex;
-    width: 1060px;
-    margin: 0 auto;
-}
 
 .navigation-list {
     margin: 0;
     padding: 0;
-    width: 345px;
 }
 
 .navigation-user {
     margin-left: auto;
     padding: 0;
-    width: 264px;
 }
 
 .navigation-logo-sedona {
@@ -215,19 +223,33 @@ body {
     width: 139px;
 }
 
+/* мне логотип через цсс нужно отправить на строку навигации? */
+
+
 .navigation-link {
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
     color: #000000;
     text-decoration: none;
+    list-style: none;
 }
 
 .navigation-user-link {
     line-height: 24px;
     color: #000000;
     text-decoration: none;
+    list-style: none;
 }
+
+/* точки не убрались. что я сделал не так?
+через ли тег убираются, но вроде не по критерию это. 
+больше способов не придумал
+li {
+    list-style: none;
+}
+
+ */
 
 .navigation-link-button {
     display: inline-block;
@@ -262,6 +284,9 @@ body {
 .page-header {
     color: #000000;
     background-color: #ffffff;
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
 }
 
 .page-footer-container {
@@ -277,6 +302,23 @@ body {
 
 .pagination-show-more {
     text-transform: uppercase;
+}
+
+.pagination-link {
+    background: #83B3D3;
+    color: #ffffff;
+    border-radius: 4px;
+    left: 63px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.pagination-current {
+    background: #F2F2F2;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 4px;
 }
 
 .product-card-button {
@@ -336,23 +378,6 @@ body {
     left: 330px;
 }
 
-.pagination-link {
-    background: #83B3D3;
-    color: #ffffff;
-    border-radius: 4px;
-    width: 55px;
-    height: 55px;
-    left: 63px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 25px;
-}
-
-.pagination-current {
-    background: #F2F2F2;
-    color: #000000;
-}
-
 .rating-star {
     text-transform: uppercase;
 }
@@ -373,4 +398,9 @@ body {
 .sort-button {
     color: #000000;
     text-decoration: none;
+}
+
+.text-thin {
+    font-weight: 400;
+    text-align: center;
 }
