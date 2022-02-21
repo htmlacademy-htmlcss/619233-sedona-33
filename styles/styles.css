@@ -16,7 +16,7 @@
     font-display: swap;
 }
 
-::before, *::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
@@ -37,27 +37,21 @@ body {
     padding: 0;
 }
 
-/* Контейнеры и сетки */
-
-.page-container {
-    width: 1200px;
-    margin: 0 auto 0 auto;
-}
-
-
-.causes-inside {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-
 
 .about-text {
     color: #000000;
     text-decoration: none;
+}
+
+.breadcrumbs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs-link {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .button-link-nav {
@@ -87,6 +81,12 @@ body {
     background-color: #756257;
 }
 
+.causes-inside {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .causes-item-cold {
     background-color: rgba(131, 179, 211, 0.12);
 }
@@ -99,6 +99,9 @@ body {
 .contacts-main {
     background: url("../images/mail-bg.png") no-repeat center;
     background-size: 100%;
+    color: #FFFFFF;
+    text-align: center;
+
 }
 
 .catalog-products {
@@ -129,8 +132,25 @@ body {
     text-align: center;
 }
 
-/* свойства не срабатывают. не понимаю, почему */
+.contacts-footer {
+    display: flex;
+}
 
+
+.causes-inside {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.catalog-filter-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
 
 
 .email-date {
@@ -138,10 +158,12 @@ body {
     background-color: #83B3D3;
 }
 
-/* Поле "подписаться" текст на странице каталога есть, но фона нет*/
-
 .email-main-date {
     text-transform: uppercase;
+}
+
+.footer-social-list {
+    list-style: none;
 }
 
 .footer-contacts-phone {
@@ -152,7 +174,6 @@ body {
 }
 
 .footer-social-list {
-    margin-right: auto;
     max-width: 190px;
 }
 
@@ -160,8 +181,17 @@ body {
 
 .hotels-item {
     display: flex;
-    margin: 16px;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item-icons-cold-hard {
+    width: 400px;
+}
+
+.item-icons-cold {
+    width: 400px;
 }
 
 .item-icons-blue {
@@ -201,19 +231,36 @@ body {
  номер телефона и логотив академии. 
  Их нужно двигать одним свойством под общим классом для ВСЕГО футера?  */
 
+.list-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
 .main-container {
     flex-grow: 1;
 }
 
+.navigation {
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+
+}
 
 .navigation-list {
+    width: 345px;
     margin: 0;
     padding: 0;
 }
 
 .navigation-user {
-    margin-left: auto;
+    width: 264px;
+    margin: 0;
     padding: 0;
+    margin-left: auto;
 }
 
 .navigation-logo-sedona {
@@ -225,6 +272,13 @@ body {
 
 /* мне логотип через цсс нужно отправить на строку навигации? */
 
+.navigation-list {
+    list-style: none;
+}
+
+.navigation-user {
+    list-style: none;
+}
 
 .navigation-link {
     font-size: 20px;
@@ -239,7 +293,6 @@ body {
     line-height: 24px;
     color: #000000;
     text-decoration: none;
-    list-style: none;
 }
 
 /* точки не убрались. что я сделал не так?
@@ -281,6 +334,11 @@ li {
     display: flex;
 }
 
+.page-container {
+    width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
 .page-header {
     color: #000000;
     background-color: #ffffff;
@@ -298,6 +356,10 @@ li {
 .product-card-link {
     text-decoration: none;
     color: #000000;
+}
+
+.pagination {
+    list-style: none;
 }
 
 .pagination-show-more {
@@ -400,7 +462,15 @@ li {
     text-decoration: none;
 }
 
+.search-hotels {
+    margin: 0;
+    padding: 0;
+}
+
 .text-thin {
+    color: #333333;
     font-weight: 400;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
