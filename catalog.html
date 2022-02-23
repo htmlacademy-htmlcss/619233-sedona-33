@@ -118,20 +118,22 @@
                 </section>
                 <section>
                     <h2>Найдено гостиниц: 38</h2>
-                    <select class="select-control" aria-label="Сортировка">
-                        <option value="cheap">Сначала дешёвые</option>
-                        <option value="expensive">Сначала дорогие</option>
-                        <option value="popular">Сначала популярные</option>
-                    </select>
-                    <a href="#" class="sort-button">
-                        <span class="visually-hidden">Показать карточки</span>
-                    </a>
-                    <a href="#" class="sort-button">
-                        <span class="visually-hidden">Показать список</span>
-                    </a>
-                    <a href="#" class="sort-button">
-                        <span class="visually-hidden">Показать что-то ещё</span>
-                    </a>
+                    <div class="sorting-container">
+                        <select class="select-control" aria-label="Сортировка">
+                            <option value="cheap">Сначала дешёвые</option>
+                            <option value="expensive">Сначала дорогие</option>
+                            <option value="popular">Сначала популярные</option>
+                        </select>
+                        <a href="#" class="sort-button">
+                            <span class="visually-hidden">Показать карточки</span>
+                        </a>
+                        <a href="#" class="sort-button">
+                            <span class="visually-hidden">Показать список</span>
+                        </a>
+                        <a href="#" class="sort-button">
+                            <span class="visually-hidden">Показать что-то ещё</span>
+                        </a>
+                    </div>
                 </section>
                 <section>
                     <ul class="hotels-item">
@@ -223,27 +225,28 @@
                         </li>
                     </ul>
                     <button class="pagination-show-more" type="button">Загрузить ещё</button>
-
-                    <ul class="pagination">
-                        <li class="pagination-item">
-                            <a class="pagination-link pagination-current">1</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">2</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">3</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">4</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">...</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a class="pagination-link" href="#">10</a>
-                        </li>
-                    </ul>
+                    <div class="pagination-container">
+                        <ul class="pagination">
+                            <li class="pagination-item">
+                                <a class="pagination-link pagination-current">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a class="pagination-link" href="#">10</a>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
                 <section class="contacts-catalog">
                     <h2 class="contacts-catalog-fat">Подпишитесь на рассылку</h2>

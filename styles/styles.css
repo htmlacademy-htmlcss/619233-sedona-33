@@ -37,6 +37,16 @@ body {
     padding: 0;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 .about-text {
     color: #000000;
@@ -44,7 +54,8 @@ body {
 }
 
 .breadcrumbs {
-    list-style: none;
+    display: flex;
+    list-style-type: none;
     margin: 0;
     padding: 0;
 }
@@ -82,6 +93,7 @@ body {
 }
 
 .causes-inside {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -94,6 +106,7 @@ body {
 .causes-title {
     text-decoration: none;
     text-transform: uppercase;
+    margin: 0;
 }
 
 .contacts-main {
@@ -134,6 +147,7 @@ body {
 
 .contacts-footer {
     display: flex;
+    margin: 20px;
 }
 
 
@@ -152,6 +166,10 @@ body {
 
 }
 
+.ccatalog-filter {
+    display: flex;
+}
+
 
 .email-date {
     text-transform: uppercase;
@@ -162,10 +180,6 @@ body {
     text-transform: uppercase;
 }
 
-.footer-social-list {
-    list-style: none;
-}
-
 .footer-contacts-phone {
     font-size: 40px;
     line-height: 40px;
@@ -174,10 +188,29 @@ body {
 }
 
 .footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
     max-width: 190px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-/* Не понял, как подбирается величина, если у меня будут стоять логотипы */
+.footer-social-item {
+    width: 18px;
+    height: 15px;
+    margin-right: 29px;
+    margin-bottom: 55px;
+}
+
+/* c параметрами блоков соцсетей ничего не понятно.
+у каждой иконки разные параметры. значит ли это что параметры нужно 
+задать группе элементов? */
+
+.footer-social-item:nth-child(3n) {
+    margin-right: 0;
+}
 
 .hotels-item {
     display: flex;
@@ -221,15 +254,9 @@ body {
     font-size: 700;
 }
 
-/* Текст Гостиницы Седоны в начале каталога. Как сделать его в соответствии с макетом? */
-
 .logo-html {
     margin-left: auto;
 }
-
-/*Не могу понять, почему свойство марджин не двигает 
- номер телефона и логотив академии. 
- Их нужно двигать одним свойством под общим классом для ВСЕГО футера?  */
 
 .list-icons {
     list-style: none;
@@ -241,6 +268,8 @@ body {
 
 .main-container {
     flex-grow: 1;
+    padding: 0;
+    margin: 0;
 }
 
 .navigation {
@@ -251,16 +280,22 @@ body {
 }
 
 .navigation-list {
+    display: flex;
+    flex-wrap: wrap;
     width: 345px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 .navigation-user {
+    display: flex;
+    flex-wrap: wrap;
     width: 264px;
     margin: 0;
     padding: 0;
     margin-left: auto;
+    list-style: none;
 }
 
 .navigation-logo-sedona {
@@ -270,17 +305,9 @@ body {
     width: 139px;
 }
 
-/* мне логотип через цсс нужно отправить на строку навигации? */
-
-.navigation-list {
-    list-style: none;
-}
-
-.navigation-user {
-    list-style: none;
-}
-
 .navigation-link {
+    display: block;
+    margin: 20px 17px;
     font-size: 20px;
     font-weight: 700;
     line-height: 26px;
@@ -289,24 +316,25 @@ body {
     list-style: none;
 }
 
+/* тут по макету я не понял где смотреть паддинг. 
+его высчитать на пальцах только можно? */
+
 .navigation-user-link {
+    display: block;
     line-height: 24px;
     color: #000000;
     text-decoration: none;
+    min-width: 16px;
+    min-height: 22px;
 }
 
-/* точки не убрались. что я сделал не так?
-через ли тег убираются, но вроде не по критерию это. 
-больше способов не придумал
-li {
-    list-style: none;
-}
-
- */
+/* по лайву не понял, как мин-видс и мин-хейдс задаются.
+задал такие же как на демках */
 
 .navigation-link-button {
     display: inline-block;
     box-sizing: border-box;
+    margin: 13px;
     padding: 0 20px;
     border-radius: 4px;
     height: 37px;
@@ -330,10 +358,6 @@ li {
     border: none;
 }
 
-.ccatalog-filter {
-    display: flex;
-}
-
 .page-container {
     width: 1200px;
     margin: 0 auto 0 auto;
@@ -345,7 +369,12 @@ li {
     display: flex;
     width: 1060px;
     margin: 0 auto;
+    padding: 0;
 }
+
+/* как подтянуть тело сайта к шапке? или шапку к телу? когда я подтянул
+тело сайта, то оно заслонило нижний край логотипа Седоны, а по макету 
+нижний край логотипа немного заходит на картинку */
 
 .page-footer-container {
     display: flex;
@@ -359,7 +388,10 @@ li {
 }
 
 .pagination {
-    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 .pagination-show-more {
@@ -367,6 +399,8 @@ li {
 }
 
 .pagination-link {
+    display: block;
+    box-sizing: border-box;
     background: #83B3D3;
     color: #ffffff;
     border-radius: 4px;
@@ -377,10 +411,22 @@ li {
 }
 
 .pagination-current {
+    display: block;
+    box-sizing: border-box;
     background: #F2F2F2;
     color: #000000;
     font-weight: 700;
     border-radius: 4px;
+}
+
+.pagination-container {
+    display: flex;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
 }
 
 .product-card-button {
@@ -460,11 +506,31 @@ li {
 .sort-button {
     color: #000000;
     text-decoration: none;
+    height: 48px;
+    width: 48px;
+}
+
+.sorting-container {
+    display: flex;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 72px;
+    margin-bottom: 53px;
 }
 
 .search-hotels {
     margin: 0;
     padding: 0;
+}
+
+.text-thin-five {
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+    size: 22px;
 }
 
 .text-thin {
@@ -473,4 +539,6 @@ li {
     text-align: center;
     margin: 0;
     padding: 0;
+    line-height: 26px;
+    size: 22px;
 }
