@@ -1,0 +1,544 @@
+@font-face {
+
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/ptsans-400.woff2") format("woff2");
+    font-display: swap;
+
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/ptsans-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.about-text {
+    color: #000000;
+    text-decoration: none;
+}
+
+.breadcrumbs {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.button-link-nav {
+    padding-right: 260px;
+}
+
+
+.button-reset {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 400;
+    background: none;
+    border: none;
+}
+
+.button-search {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    border-radius: 4px;
+    line-height: 36px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background-color: #756257;
+}
+
+.causes-inside {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.causes-item-cold {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.causes-title {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.contacts-main {
+    background: url("../images/mail-bg.png") no-repeat center;
+    background-size: 100%;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.catalog-products {
+    background: url("../images/catalog/catalog-background-up.jpg");
+    background-size: 100%;
+    color: #ffffff;
+}
+
+.contacts-main-white {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.contacts-catalog-fat {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contacrs-main-white-mini {
+    color: #ffffff;
+    font-weight: 400;
+    text-align: center;
+}
+
+.contacts-footer {
+    display: flex;
+    margin: 20px;
+}
+
+
+.causes-inside {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.catalog-filter-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.ccatalog-filter {
+    display: flex;
+}
+
+
+.email-date {
+    text-transform: uppercase;
+    background-color: #83B3D3;
+}
+
+.email-main-date {
+    text-transform: uppercase;
+}
+
+.footer-contacts-phone {
+    font-size: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 190px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-social-item {
+    width: 18px;
+    height: 15px;
+    margin-right: 29px;
+    margin-bottom: 55px;
+}
+
+/* c параметрами блоков соцсетей ничего не понятно.
+у каждой иконки разные параметры. значит ли это что параметры нужно 
+задать группе элементов? */
+
+.footer-social-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.hotels-item {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.item-icons-cold-hard {
+    width: 400px;
+}
+
+.item-icons-cold {
+    width: 400px;
+}
+
+.item-icons-blue {
+    background-color: #83B3D3;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.item-icons-cold {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.introduction-header {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.inner-header-title {
+    font-size: 700;
+}
+
+.logo-html {
+    margin-left: auto;
+}
+
+.list-icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-container {
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+
+}
+
+.navigation-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 345px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation-user {
+    display: flex;
+    flex-wrap: wrap;
+    width: 264px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    list-style: none;
+}
+
+.navigation-logo-sedona {
+    display: block;
+    margin: 0;
+    padding-left: 0;
+    width: 139px;
+}
+
+.navigation-link {
+    display: block;
+    margin: 20px 17px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    color: #000000;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* тут по макету я не понял где смотреть паддинг. 
+его высчитать на пальцах только можно? */
+
+.navigation-user-link {
+    display: block;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+    min-width: 16px;
+    min-height: 22px;
+}
+
+/* по лайву не понял, как мин-видс и мин-хейдс задаются.
+задал такие же как на демках */
+
+.navigation-link-button {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 13px;
+    padding: 0 20px;
+    border-radius: 4px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    background-color: #756257;
+}
+
+.one-blue-button {
+    background: #83B3D3;
+    color: #ffffff;
+    width: 160px;
+    height: 48px;
+    border-radius: 4px;
+    font-weight: 700;
+    size: 16px;
+    line-height: 21px;
+    border: none;
+}
+
+.page-container {
+    width: 1200px;
+    margin: 0 auto 0 auto;
+}
+
+.page-header {
+    color: #000000;
+    background-color: #ffffff;
+    display: flex;
+    width: 1060px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* как подтянуть тело сайта к шапке? или шапку к телу? когда я подтянул
+тело сайта, то оно заслонило нижний край логотипа Седоны, а по макету 
+нижний край логотипа немного заходит на картинку */
+
+.page-footer-container {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.pagination {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.pagination-show-more {
+    text-transform: uppercase;
+}
+
+.pagination-link {
+    display: block;
+    box-sizing: border-box;
+    background: #83B3D3;
+    color: #ffffff;
+    border-radius: 4px;
+    left: 63px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.pagination-current {
+    display: block;
+    box-sizing: border-box;
+    background: #F2F2F2;
+    color: #000000;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.pagination-container {
+    display: flex;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.pagination-item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.product-card-button {
+    text-decoration: none;
+    color: #000000;
+}
+
+.product-card-button-brown {
+    background: #756257;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    width: 133px;
+    height: 37px;
+}
+
+.product-card-button-blue {
+    background: #83B3D3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    width: 133px;
+    height: 37px;
+}
+
+.product-card-button-green {
+    background: #7DB54F;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 20px;
+    width: 133px;
+    height: 37px;
+}
+
+.pagination-show-more {
+    text-transform: uppercase;
+    background-color: #83B3D3;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    width: 619px;
+    height: 60px;
+    top: 1568px;
+    left: 330px;
+}
+
+.rating-star {
+    text-transform: uppercase;
+}
+
+.rating-meaning {
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    width: 160px;
+    height: 37px;
+    left: 140px;
+
+}
+
+.sort-button {
+    color: #000000;
+    text-decoration: none;
+    height: 48px;
+    width: 48px;
+}
+
+.sorting-container {
+    display: flex;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 72px;
+    margin-bottom: 53px;
+}
+
+.search-hotels {
+    margin: 0;
+    padding: 0;
+}
+
+.text-thin-five {
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 36px;
+    size: 22px;
+}
+
+.text-thin {
+    color: #333333;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 26px;
+    size: 22px;
+}
