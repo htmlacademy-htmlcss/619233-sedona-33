@@ -56,8 +56,8 @@ body {
 .breadcrumbs {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
 }
 
 .breadcrumbs-link {
@@ -80,16 +80,24 @@ body {
 }
 
 .button-search {
-    display: inline-block;
     box-sizing: border-box;
-    padding: 0;
-    border-radius: 4px;
+    margin-top: 56px;
+    margin-left: 312px;
+    margin-right: 313px;
+    margin-bottom: 93px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 13%;
+    border-radius: 10px;
+    border: 1px #000000;
     line-height: 36px;
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
     color: #fff;
     background-color: #756257;
+    border-color: #000000;
+    box-shadow: #000000;
 }
 
 .causes-inside {
@@ -97,10 +105,6 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.causes-item-cold {
-    background-color: rgba(131, 179, 211, 0.12);
 }
 
 .causes-title {
@@ -114,13 +118,14 @@ body {
     background-size: 100%;
     color: #FFFFFF;
     text-align: center;
-
+    padding: 94px 0 93px 0;
 }
 
 .catalog-products {
     background: url("../images/catalog/catalog-background-up.jpg");
     background-size: 100%;
     color: #ffffff;
+    margin-bottom: 50px;
 }
 
 .contacts-main-white {
@@ -147,7 +152,9 @@ body {
 
 .contacts-footer {
     display: flex;
-    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 30px;
 }
 
 
@@ -168,6 +175,7 @@ body {
 
 .ccatalog-filter {
     display: flex;
+    align-content: space-around;
 }
 
 
@@ -204,19 +212,51 @@ body {
     margin-bottom: 55px;
 }
 
-/* c параметрами блоков соцсетей ничего не понятно.
-у каждой иконки разные параметры. значит ли это что параметры нужно 
-задать группе элементов? */
 
 .footer-social-item:nth-child(3n) {
     margin-right: 0;
 }
 
+.four-select {
+    width: 160px;
+    height: 48px;
+    border-radius: 4px;
+    margin-right: 72px;
+}
+
 .hotels-item {
     display: flex;
-    margin: 0;
+    flex-wrap: wrap;
+    width: 1056px;
+    margin-top: 0;
+    margin-right: 72px;
+    margin-left: 72px;
+    margin-bottom: 64px;
     padding: 0;
     list-style: none;
+}
+
+.hotels-list {
+    width: 340px;
+}
+
+.hotels-info {
+    display: flex;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 299px;
+    height: 23px;
+}
+
+
+.hotel-price {
+    font-size: 18px;
+    line-height: 23px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+
 }
 
 .item-icons-cold-hard {
@@ -228,11 +268,10 @@ body {
 }
 
 .item-icons-blue {
-    background-color: #83B3D3;
     color: #ffffff;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    text-align: center;
     padding: 0;
     margin: 0;
 }
@@ -251,12 +290,13 @@ body {
 }
 
 .inner-header-title {
-    font-size: 700;
+    margin-top: -7px;
+    font-size: 60px;
+    margin-bottom: 0;
+    
 }
 
-.logo-html {
-    margin-left: auto;
-}
+/* Еще хотел спросить, как открывать поиск по тегу в WS-Код? */
 
 .list-icons {
     list-style: none;
@@ -264,6 +304,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .main-container {
@@ -316,7 +357,7 @@ body {
     list-style: none;
 }
 
-/* тут по макету я не понял где смотреть паддинг. 
+/* тут по макету я не понял где смотреть паддинг.
 его высчитать на пальцах только можно? */
 
 .navigation-user-link {
@@ -328,8 +369,6 @@ body {
     min-height: 22px;
 }
 
-/* по лайву не понял, как мин-видс и мин-хейдс задаются.
-задал такие же как на демках */
 
 .navigation-link-button {
     display: inline-block;
@@ -344,6 +383,70 @@ body {
     text-decoration: none;
     color: #fff;
     background-color: #756257;
+}
+
+.items-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.item-inner {
+    display: flex;
+    flex-direction: column;
+    background-color: #83B3D3;
+    align-items: center;
+    justify-content: center;
+    min-height: 384px;
+    width: 400px;
+}
+
+.causes-item-cold {
+    background-color: rgba(131, 179, 211, 0.12);
+}
+
+.causes-item-dark-cold {
+    background-color: rgba(131, 179, 211, 0.2);
+}
+
+.causes-item-white {
+    background-color: #FFFFFF;
+}
+
+.item-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.item-title-white {
+    margin: 0 0 25px 0;
+    color: #ffffff;
+}
+
+.advantages-text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #333333;
+    max-width: 250px;
+    margin: 0;
+    text-align: center;
+}
+
+.advantages-text-blue {
+    color: #ffffff;
+    max-width: 220px;
+}
+
+.advantages-number {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0 0 26px 0;
+}
+
+.advantages-icon {
+    margin: 0 0 23px 0;
 }
 
 .one-blue-button {
@@ -372,12 +475,7 @@ body {
     padding: 0;
 }
 
-/* как подтянуть тело сайта к шапке? или шапку к телу? когда я подтянул
-тело сайта, то оно заслонило нижний край логотипа Седоны, а по макету 
-нижний край логотипа немного заходит на картинку */
-
 .page-footer-container {
-    display: flex;
     width: 1200px;
     margin: 0 auto;
 }
@@ -387,6 +485,8 @@ body {
     color: #000000;
 }
 
+/* Числа в пагинации в каждом блоке не по центру, 
+не могу задать им положение по центру, свойства не действуют */
 .pagination {
     display: flex;
     margin: 0;
@@ -421,12 +521,58 @@ body {
 
 .pagination-container {
     display: flex;
+
     padding: 30px;
     background-color: #ffffff;
 }
 
+.pagination {
+    display: flex;
+    width: 1056px;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .pagination-item:not(:last-child) {
     margin-right: 8px;
+}
+
+.pagination-link {
+    display: block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 55px;
+    height: 55px;
+    padding-top: 0;
+    padding-right: 64%;
+    padding-bottom: 0;
+    padding-left: 30%;
+    line-height: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #83B3D3;
+    text-decoration: none;
+}
+
+.hotels-in-page {
+    margin-left: auto;
+    margin-right: 51px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    width: 175px;
+    height: 23px;
+}
+
+.four-select {
+    margin-right: 0;
+}
+
+.pagination-current {
+    background-color: #F2F2F2;
+    color: #000000;
 }
 
 .product-card-button {
@@ -445,6 +591,9 @@ body {
     line-height: 20px;
     width: 133px;
     height: 37px;
+    margin-right: 26px;
+    text-align: center;
+    
 }
 
 .product-card-button-blue {
@@ -458,6 +607,7 @@ body {
     line-height: 20px;
     width: 133px;
     height: 37px;
+    text-align: center;
 }
 
 .product-card-button-green {
@@ -471,6 +621,7 @@ body {
     line-height: 20px;
     width: 133px;
     height: 37px;
+    text-align: center;
 }
 
 .pagination-show-more {
@@ -503,11 +654,22 @@ body {
 
 }
 
+.select-control {
+    background-color: solid #E6E6E6;
+    color: #000000;
+    border-radius: 4px;
+    width: 287px;
+    height: 24px;
+    margin-right: 0;
+}
+
 .sort-button {
     color: #000000;
     text-decoration: none;
-    height: 48px;
-    width: 48px;
+}
+
+.sorting-button {
+    display: flex;
 }
 
 .sorting-container {
@@ -515,22 +677,26 @@ body {
     color: #000000;
     background-color: #ffffff;
     padding: 72px;
-    margin-bottom: 53px;
+    padding-bottom: 0;
+    margin-bottom: 56px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .search-hotels {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-thin-five {
     color: #333333;
     font-weight: 400;
     text-align: center;
-    margin: 0;
+    margin: 31px 240px 80px 240px;
     padding: 0;
     line-height: 36px;
-    size: 22px;
+    font-size: 22px;
+    max-width: 720px;
 }
 
 .text-thin {
@@ -538,7 +704,15 @@ body {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding-left: 240px;
+    padding-right: 240px;
     line-height: 26px;
-    size: 22px;
+    font-size: 22px;
+}
+
+.text-bold {
+    font-size: 30px;
+    line-height: 39px;
+    margin-right: 192px;
+    margin-top: 0px;
 }
