@@ -31,7 +31,8 @@
           <li class="navigation-item-user">
             <a class="navigation-user-link" href="#"><span class="visually-hidden">В избранное</span></a>
           </li>
-          <a class="navigation-link-button" href="#">ХОЧУ СЮДА!</a>
+          <li class="want-button">
+            <a class="navigation-link-button" href="#">ХОЧУ СЮДА!</a></li>
         </ul>
       </nav>
     </header>
@@ -103,18 +104,22 @@
           <h2 class="introduction-header">Заинтересовались?</h2>
           <p class="text-thin">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в
             Седоне</p>
-             <a class="button-search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+          <div class="Absolute-Center">
+            <a class="button-search" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
+          </div>
+          <!-- Кнопка встала по центру, но элементы прижаты плотно друг к другу.
+            В тренажерах и учебнике говорится, что каждый блок толкает вниз другой блок.
+          Соответственно, мне нужно подбирать нижние отступы для каждого элемента? Или? -->
         </section>
       </div>
       <section class="contacts-main">
         <h2 class="contacts-main-white">Подпишитесь на рассылку</h2>
         <p class="contacts-main-white-mini">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="email-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="email-main-date">ПОДПИСАТЬСЯ</label>
-          <input type="text" id="email-main-date" name="email-date" placeholder="Ваш e-mail">
+          <button class="email-main-button">ПОДПИСАТЬСЯ</button>
+          <input type="text" class="text-input" id="email-main-date" name="email-date" placeholder="Ваш e-mail">
         </form>
       </section>
-  </div>
   </main>
   <footer class="page-footer">
     <div class="page-footer-container">
