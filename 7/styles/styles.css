@@ -126,7 +126,11 @@ body {
     background-size: 100%;
     color: #ffffff;
     margin-bottom: 50px;
+    padding: 35px 72px 83px 71px;
 }
+
+/* Eсли порядок флекс-элементов задается через родителя, 
+то как найти свойство чтобы сделать нужный порядок? Кажется я всё перебрал */
 
 .contacts-main-white {
     font-weight: 700;
@@ -173,9 +177,22 @@ body {
 
 }
 
-.ccatalog-filter {
+.catalog-filter {
     display: flex;
-    align-content: space-around;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.double-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.double-choice {
+    display: flex;
+    justify-content: space-between;
 }
 
 
@@ -236,16 +253,9 @@ body {
     list-style: none;
 }
 
-.hotels-list {
-    width: 340px;
-}
-
 .hotels-info {
     display: flex;
-    align-content: space-around;
-    flex-wrap: wrap;
-    width: 299px;
-    height: 23px;
+
 }
 
 
@@ -255,7 +265,6 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-right: 25px;
 
 }
 
@@ -290,10 +299,10 @@ body {
 }
 
 .inner-header-title {
-    margin-top: -7px;
     font-size: 60px;
-    margin-bottom: 0;
-    
+    line-height: 77px;
+    margin: 0 0 5px 0;
+
 }
 
 /* Еще хотел спросить, как открывать поиск по тегу в WS-Код? */
@@ -452,8 +461,6 @@ body {
 .one-blue-button {
     background: #83B3D3;
     color: #ffffff;
-    width: 160px;
-    height: 48px;
     border-radius: 4px;
     font-weight: 700;
     size: 16px;
@@ -483,6 +490,13 @@ body {
 .product-card-link {
     text-decoration: none;
     color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card-title {
+    margin: 0;
+    line-height: 32px;
 }
 
 /* Числа в пагинации в каждом блоке не по центру, 
@@ -521,7 +535,7 @@ body {
 
 .pagination-container {
     display: flex;
-
+    justify-content: space-between;
     padding: 30px;
     background-color: #ffffff;
 }
@@ -540,15 +554,13 @@ body {
 }
 
 .pagination-link {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
     box-sizing: border-box;
     width: 55px;
     height: 55px;
-    padding-top: 0;
-    padding-right: 64%;
-    padding-bottom: 0;
-    padding-left: 30%;
     line-height: 26px;
     font-weight: 700;
     color: #ffffff;
@@ -557,13 +569,10 @@ body {
 }
 
 .hotels-in-page {
-    margin-left: auto;
-    margin-right: 51px;
-    margin-top: 16px;
-    margin-bottom: 16px;
     font-size: 18px;
-    width: 175px;
-    height: 23px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-right: 51px;
 }
 
 .four-select {
@@ -589,11 +598,13 @@ body {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 20px;
-    width: 133px;
-    height: 37px;
-    margin-right: 26px;
-    text-align: center;
-    
+    padding-top: 9px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 133px;
+    width: 100%;
+
 }
 
 .product-card-button-blue {
@@ -605,9 +616,13 @@ body {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 20px;
-    width: 133px;
-    height: 37px;
-    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 140px;
+    width: 100%;
+
 }
 
 .product-card-button-green {
@@ -619,9 +634,12 @@ body {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 20px;
-    width: 133px;
-    height: 37px;
-    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 140px;
+    width: 100%;
 }
 
 .pagination-show-more {
@@ -635,6 +653,11 @@ body {
     height: 60px;
     top: 1568px;
     left: 330px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
 }
 
 .rating-star {
@@ -686,6 +709,10 @@ body {
 .search-hotels {
     display: flex;
     flex-direction: column;
+}
+
+.select-bottom {
+    display: flex;
 }
 
 .text-thin-five {
