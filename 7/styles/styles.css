@@ -81,13 +81,12 @@ body {
 
 .button-search {
     box-sizing: border-box;
-    margin-top: 56px;
-    margin-left: 312px;
-    margin-right: 313px;
-    margin-bottom: 93px;
+    display: flex;
+    justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 13%;
+    max-width: 575px;
+    width: 100%;
     border-radius: 10px;
     border: 1px #000000;
     line-height: 36px;
@@ -98,6 +97,13 @@ body {
     background-color: #756257;
     border-color: #000000;
     box-shadow: #000000;
+}
+
+.Absolute-Center {
+    display: flex;
+    justify-content: center;
+    padding-top: 56px;
+    padding-bottom: 93px;
 }
 
 .causes-inside {
@@ -144,6 +150,7 @@ body {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
+    margin-bottom: 46px;
     text-transform: uppercase;
     text-align: center;
 }
@@ -195,14 +202,41 @@ body {
     justify-content: space-between;
 }
 
+.email-form {
+    display: flex;
+    justify-content: center;
+}
 
 .email-date {
     text-transform: uppercase;
     background-color: #83B3D3;
 }
 
-.email-main-date {
+.email-main-button {
+    background: #83B3D3;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: 700;
     text-transform: uppercase;
+    font-size: 20px;
+    line-height: 26px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    max-width: 200px;
+    width: 100%;
+    order: 1;
+    border: 0;
+}
+
+.text-input {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px 0px 0px 10px;
+    border: 0;
+    background: #F2F2F2;
 }
 
 .footer-contacts-phone {
@@ -293,6 +327,9 @@ body {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
+    padding-top: 91px;
+    padding-bottom: 29px;
+    margin: 0;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -340,8 +377,9 @@ body {
 
 .navigation-user {
     display: flex;
-    flex-wrap: wrap;
-    width: 264px;
+    justify-content: space-between;
+    max-width: 264px;
+    width: 100%;
     margin: 0;
     padding: 0;
     margin-left: auto;
@@ -380,18 +418,29 @@ body {
 
 
 .navigation-link-button {
-    display: inline-block;
+    display: flex;
+    border: 0;
+    justify-content: center;
+    align-items: center;
+    padding-top: 9px;
+    padding-bottom: 8px;
     box-sizing: border-box;
-    margin: 13px;
-    padding: 0 20px;
+    min-width: 160px;
+    width: 100%;
     border-radius: 4px;
-    height: 37px;
+    box-sizing: border-box;
     line-height: 37px;
     font-size: 16px;
     font-weight: 700;
     text-decoration: none;
     color: #fff;
     background-color: #756257;
+}
+
+.want-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .items-wrapper {
@@ -466,6 +515,8 @@ body {
     size: 16px;
     line-height: 21px;
     border: none;
+    max-width: 160px;
+    width: 100%;
 }
 
 .page-container {
@@ -731,8 +782,7 @@ body {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    padding-left: 240px;
-    padding-right: 240px;
+    margin-bottom: 46px;
     line-height: 26px;
     font-size: 22px;
 }
