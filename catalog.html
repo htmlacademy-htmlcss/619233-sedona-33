@@ -6,6 +6,7 @@
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+<!-- Шапка -->
 
 <body>
     <div class="page-wrapper">
@@ -42,7 +43,6 @@
             <div class="page-container">
                 <section class="catalog-products">
                     <h1 class="inner-header-title">Гостиницы Седоны</h1>
-                    <!-- отступы тега выше двигают почему-то всю секцию -->
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs-item">
                             <a class="breadcrumbs-link" href="index.html"> <span class="visually-hidden">
@@ -52,6 +52,7 @@
                             <a class="breadcrumbs-link">Гостиницы</a>
                         </li>
                     </ul>
+                    <!-- Фильтр -->
                     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
 
                         <fieldset class="catalog-filter-group">
@@ -141,8 +142,8 @@
                         </a>
                     </div>
                 </section>
-
-                <section>
+                <!-- Карточки товаров -->
+              
                     <ul class="hotels-item">
                         <li class="hotels-list">
                             <div class="product-card">
@@ -162,11 +163,7 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <div class="rating-star">1</div>
-                                <div class="rating-star">2</div>
-                                <div class="rating-star">3</div>
-                                <div class="rating-star">4</div>
-                                <div class="rating-star">5</div>
+                                <img class="rating-star">12345</img>
                                 <p class="rating-meaning">Рейтинг: 8,5</p>
                             </div>
 
@@ -188,11 +185,7 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <div class="rating-star">1</div>
-                                <div class="rating-star">2</div>
-                                <div class="rating-star">3</div>
-                                <div class="rating-star">4</div>
-                                <div class="rating-star">5</div>
+                                <img class="rating-star">12345</img>
                                 <p class="rating-meaning">Рейтинг: 8,9</p>
                             </div>
 
@@ -214,11 +207,7 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <div class="rating-star">1</div>
-                                <div class="rating-star">2</div>
-                                <div class="rating-star">3</div>
-                                <div class="rating-star">4</div>
-                                <div class="rating-star">5</div>
+                                <img class="rating-star">12345</img>
                                 <p class="rating-meaning">Рейтинг: 9,2</p>
                             </div>
 
@@ -240,17 +229,16 @@
                                 </div>
                             </div>
                             <div class="rating">
-                                <div class="rating-star">1</div>
-                                <div class="rating-star">2</div>
-                                <div class="rating-star">3</div>
-                                <div class="rating-star">4</div>
-                                <div class="rating-star">5</div>
+                                <img class="rating-star">12345</img>
                                 <p class="rating-meaning">Рейтинг: 9,2</p>
                             </div>
 
                         </li>
                     </ul>
+                    <div class="button-center">
                     <button class="pagination-show-more" type="button">Загрузить ещё</button>
+                    </div>
+                    <!-- Пагинация -->
                     <div class="pagination-container">
                         <ul class="pagination">
                             <li class="pagination-item">
@@ -277,8 +265,8 @@
                             <option value="four">4</option>
                         </select>
                     </div>
-                </section>
-
+              
+                <!-- Подвал -->
                 <section class="contacts-catalog">
                     <h2 class="contacts-catalog-fat">Подпишитесь на рассылку</h2>
                     <p class="text-thin">Только полезная информация и никакого спама,<br>
