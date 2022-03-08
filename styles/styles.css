@@ -96,10 +96,9 @@ body {
     color: #fff;
     background-color: #756257;
     border-color: #000000;
-    box-shadow: #000000;
 }
 
-.Absolute-Center {
+.absolute-center {
     display: flex;
     justify-content: center;
     padding-top: 56px;
@@ -276,8 +275,9 @@ body {
 }
 
 .hotels-item {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 18px;
     width: 1056px;
     margin-top: 0;
     margin-right: 72px;
@@ -289,7 +289,14 @@ body {
 
 .hotels-info {
     display: flex;
+    justify-content: space-between;
+}
 
+.hotels-list {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
 
@@ -558,11 +565,6 @@ body {
     padding: 0;
     list-style-type: none;
 }
-
-.pagination-show-more {
-    text-transform: uppercase;
-}
-
 .pagination-link {
     display: block;
     box-sizing: border-box;
@@ -693,6 +695,7 @@ body {
     width: 100%;
 }
 
+/* Кнопка под каталогом */
 .pagination-show-more {
     text-transform: uppercase;
     background-color: #83B3D3;
@@ -705,6 +708,13 @@ body {
     top: 1568px;
     left: 330px;
 }
+
+.button-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Рейтинг */
 
 .rating {
     display: flex;
