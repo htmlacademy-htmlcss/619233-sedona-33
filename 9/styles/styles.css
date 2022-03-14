@@ -171,6 +171,8 @@ body {
     color: #ffffff;
     font-weight: 400;
     text-align: center;
+    margin: 0px;
+    padding-bottom: 46px;
 }
 
 .contacts-footer {
@@ -212,6 +214,7 @@ body {
 .double-choice {
     display: flex;
     justify-content: space-between;
+    max-width: 300px;
 }
 
 .email-form {
@@ -241,6 +244,7 @@ body {
     width: 100%;
     order: 1;
     border: 0;
+    margin: 0px;
 }
 
 .email-main-button:hover {
@@ -257,13 +261,7 @@ body {
     outline-offset: 0px;
 }
 
-.text-input {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px 0px 0px 10px;
-    border: 0;
-    background: #F2F2F2;
-}
+
 
 .footer-contacts-phone {
     font-size: 40px;
@@ -350,18 +348,16 @@ body {
 .hotels-info {
     display: flex;
     justify-content: space-between;
-    
+    max-width: 299px;
 }
 
 
 .hotels-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 20px;
 }
 
+/* cccccccccccccccccccccccccccccccccccccccccccccccccc */
 
 .hotel-price {
     font-size: 18px;
@@ -422,6 +418,26 @@ body {
     flex-wrap: wrap;
 }
 
+.logo-html:hover svg {
+    fill: #756257;
+}
+
+.logo-html:active svg {
+    fill: rgba(117, 98, 87, 1);
+}
+/* при нажатии появляется голубая рамка. КАК?  */
+
+.logo-html:focus svg {
+    fill: #756257;
+    border: 3px solid #83B3D3;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* Делаю оутлайн как в предыдущ примерах
+рамка становится черной. задаю бордеры, появляется синяя рамка, но черная осталась
+как так? */
+
 .main-container {
     flex-grow: 1;
     padding: 0;
@@ -457,10 +473,6 @@ body {
     margin-left: auto;
     list-style: none;
 }
-
-/* В лайве говорится, что здесь нужно ставить относительное позиционирование
-но оно тут не работает, так как применяется, видимо, для блочного элемента,
-а у нас тут дисплей-флекс. Как быть? */
 
 
 .navigation-icon {
@@ -513,14 +525,13 @@ body {
     min-width: 16px;
 }
 
-.navigation-user-link:hover {
-    color: #756257;
+.navigation-user-link:hover svg {
+    fill: #756257;
 }
 
-.navigation-user-link:active {
-    color: rgba(117, 98, 87, 0.3);
+.navigation-user-link:active svg {
+    fill: rgba(117, 98, 87, 0.3);
 }
-
 
 .navigation-link-button {
     display: flex;
@@ -639,6 +650,8 @@ body {
     border: none;
     max-width: 160px;
     width: 100%;
+    padding: 10px 0;
+    margin: 0px;
 }
 
 .one-blue-button:hover {
@@ -676,8 +689,6 @@ body {
     line-height: 32px;
 }
 
-/* Числа в пагинации в каждом блоке не по центру, 
-не могу задать им положение по центру, свойства не действуют */
 .pagination {
     display: flex;
     margin: 0;
@@ -754,7 +765,7 @@ body {
 
 .pagination-link:focus {
     background-color: #68A2CA;
-    outline:  3px solid #756257;
+    outline: 3px solid #756257;
     outline-offset: 0px;
 }
 
@@ -780,6 +791,8 @@ body {
     color: #000000;
 }
 
+/* cccccccccccccccccccccccccccccccccccccccccccccccccccc */
+
 .product-card-button-brown {
     background: #756257;
     color: #ffffff;
@@ -789,8 +802,7 @@ body {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 20px;
-    padding-top: 9px;
-    padding-bottom: 10px;
+    padding: 10px 0px;
     display: flex;
     justify-content: center;
     max-width: 133px;
@@ -877,16 +889,16 @@ body {
 }
 
 .product-card-images:hover {
-opacity: 50%;
+    opacity: 50%;
 }
 
 .product-card-images:active {
-opacity: 50%;
+    opacity: 50%;
 }
 
 .product-card-images:focus {
-outline: 3px solid #83B3D3;
-outline-offset: 0px;
+    outline: 3px solid #83B3D3;
+    outline-offset: 0px;
 }
 
 /* Кнопка под каталогом */
@@ -914,7 +926,7 @@ outline-offset: 0px;
 
 .pagination-show-more:focus {
     background-color: #68A2CA;
-    outline:  3px solid #756257;
+    outline: 3px solid #756257;
     outline-offset: 0px;
 }
 
@@ -928,6 +940,7 @@ outline-offset: 0px;
 .rating {
     display: flex;
     justify-content: space-between;
+    margin: 0px;
 }
 
 .rating-star {
@@ -1057,20 +1070,27 @@ outline-offset: 0px;
     color: #000000;
     line-height: 26px;
     font-size: 18px;
+    padding-left: 22px;
+    margin: 0px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px 0px 0px 10px;
+    border: 0;
 }
+
 
 .text-input:hover {
     background-color: #E6E6E6;
 }
 
 .text-input:active {
-   background-color: #E6E6E6;
+    background-color: #E6E6E6;
 }
 
 .text-input:focus {
-background-color: #E6E6E6;
-outline: 3px solid #83B3D3;
-outline-offset: 0px;
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+    outline-offset: 0px;
 }
 
 .twelve {
