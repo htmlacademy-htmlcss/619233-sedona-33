@@ -350,6 +350,7 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 299px;
+    margin-bottom: 16px;
 }
 
 
@@ -357,6 +358,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0px 20px;
+    
 }
 
 /* cccccccccccccccccccccccccccccccccccccccccccccccccc */
