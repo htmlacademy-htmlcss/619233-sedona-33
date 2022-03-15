@@ -215,6 +215,7 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 300px;
+    margin-bottom: 16px;
 }
 
 .email-form {
@@ -355,6 +356,7 @@ body {
 .hotels-list {
     display: flex;
     flex-direction: column;
+    padding: 0px 20px;
 }
 
 /* cccccccccccccccccccccccccccccccccccccccccccccccccc */
@@ -364,6 +366,7 @@ body {
     line-height: 23px;
     display: flex;
     justify-content: space-between;
+    margin-right: 67px;
 
 }
 
@@ -940,17 +943,22 @@ body {
 .rating {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0px;
+    max-width: 300px;
+    padding: 0px;
+    
 }
 
 .rating-star {
     text-transform: uppercase;
     margin: 0px;
-    padding: 10px 34px;
-    margin-left: auto;
 }
 
 .rating-meaning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #F2F2F2;
     border-radius: 4px;
     margin: 0;
@@ -958,8 +966,9 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
-    padding: 10px 30px;
-    margin-right: auto;
+    max-width: 160px;
+    width: 100%;
+    padding: 10px 20px;
 }
 
 /*  */
@@ -1053,7 +1062,6 @@ body {
     font-weight: 400;
     text-align: center;
     margin: 0;
-    margin-bottom: 46px;
     line-height: 26px;
     font-size: 22px;
 }
