@@ -215,6 +215,7 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 300px;
+    margin-bottom: 16px;
 }
 
 .email-form {
@@ -365,6 +366,7 @@ body {
     line-height: 23px;
     display: flex;
     justify-content: space-between;
+    margin-right: 67px;
 
 }
 
@@ -951,7 +953,6 @@ body {
 .rating-star {
     text-transform: uppercase;
     margin: 0px;
-    padding: 10px 34px;
 }
 
 .rating-meaning {
