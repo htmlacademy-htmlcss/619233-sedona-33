@@ -78,12 +78,17 @@ body {
 
 
 .button-reset {
+    display: block;
     color: #ffffff;
     font-size: 18px;
     line-height: 23px;
     font-weight: 400;
+    padding: 6px 14px;
+    margin-left: 29px;
+    margin-right: 34px;
     background: none;
     border: none;
+    font-family: inherit;
 }
 
 .button-search {
@@ -118,6 +123,8 @@ body {
     outline-offset: 0px;
 }
 
+
+
 .absolute-center {
     display: flex;
     justify-content: center;
@@ -150,12 +157,9 @@ body {
     background: url("../images/catalog/catalog-background-up.jpg");
     background-size: 100%;
     color: #ffffff;
-    margin-bottom: 50px;
-    padding: 35px 72px 83px 71px;
+    margin-bottom: 44px;
+    padding: 0px 72px 75px 71px;
 }
-
-/* Eсли порядок флекс-элементов задается через родителя, 
-то как найти свойство чтобы сделать нужный порядок? Кажется я всё перебрал */
 
 .contacts-main-white {
     font-weight: 700;
@@ -211,6 +215,15 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 16px;
+}
+
+.catalog-filter-item {
+    margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child {
+    margin-bottom: 0;
 }
 
 .catalog-filter {
@@ -225,7 +238,10 @@ body {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
+    padding: 0;
+    line-height: 26px;
 }
+
 
 .catalog-filter-group {
     margin: 0;
@@ -237,55 +253,102 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding-left: 19px;
+    padding-left: 30px;
 }
 
 .control-mark {
     position: absolute;
     top: 2px;
+    left: 0;
     width: 20px;
     height: 20px;
-    border: 10px solid #ffffff;
-    border-radius: 3px;
+    border-radius: 4px;
+    background-color: #ffffff;
 }
 
-.control-mark:not(:last-child) {
-    margin-bottom: 16px;
+/* Реагирование первый столбик "Инфраструктура" */
+
+.control-input:hover+.control-mark {
+    opacity: 0.6;
 }
 
-.control-input[type="checkbox"]:checked+.control-mark-circle {
+.control-input:active+.control-mark {
+    opacity: 0.3;
+}
+
+.control-input:focus+.control-mark {
+    opacity: 0.6;
+    outline: 3px solid #83b3d3;
+}
+
+
+
+.control-input:disabled+.control-mark,
+.control-input:disabled:hover+.control-mark,
+.control-input:disabled:focus+.control-mark {
+    background-color: #3D5F78;
+    border-color: #3D5F78;
+    opacity: 1;
+    outline: none;
+}
+
+/* Реагирование второй столбик "ТИП Жилья" */
+
+.control-input-an:active+.control-mark-circle {
+    outline: 3px solid #83b3d3;
+}
+
+.control-input-an:focus+.control-mark-circle {
+    outline: 3px solid #83b3d3;
+}
+
+.control-input-an:disabled+.control-mark-circle,
+.control-input-an:disabled:hover+.control-mark-circle,
+.control-input-an:disabled:focus+.control-mark-circle {
+    outline: 3px solid #83b3d3;
+    outline: none;
+}
+
+
+
+/* Что не так? Фокус идет только по нажатой кнопке (второй столбец "Тип жилья")
+  А по первому столбцу идет по всем пунктам.*/
+
+.control-input[type="checkbox"]:checked+.control-mark::before {
     position: absolute;
-    top: 195px;
-    left: 195px;
-    z-index: 1000;
-    border: 5px solid #3F5E72;
-    border-radius: 50%;
-    box-shadow: 0 0 3px #cccccc;
+    width: 20px;
+    height: 20px;
     content: "";
+    background-image: url("/images/vector.svg.svg");
+    background-repeat: no-repeat;
+    background-position: 4px 5px;
 }
 
-.control-label {
-    padding-left: 19px;
+.control-input[type="radio"]+.control-mark {
+    border-radius: 50%;
+}
+
+.control-input-an[type="radio"]:checked+.control-mark-circle::before {
+    position: absolute;
+    content: "";
+    background-image: url("../images/Ellipse-hotel.svg");
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 5px;
 }
 
 .control-mark-circle {
     position: absolute;
-    margin: 0px;
-    margin-right: 0px;
-    top: 4px;
-    left: 4px;
     width: 20px;
     height: 20px;
     background-color: #ffffff;
     border-radius: 50%;
-    content: "";
+    left: 0px;
 }
 
 .control-input {
-    position: absolute;
-}
-
-.control-input-an {
     position: absolute;
 }
 
@@ -747,6 +810,7 @@ body {
     width: 100%;
     padding: 10px 0;
     margin: 0px;
+    text-transform: uppercase;
 }
 
 .one-blue-button:hover {
@@ -1069,90 +1133,124 @@ body {
     padding: 10px 20px;
 }
 
+/* упр */
+
 .range {
     display: flex;
     flex-direction: column;
-}
-
-.range-scale {
-    position: relative;
-    height: 4px;
-    background-color: #3d3d3d;
-    border-radius: 2px;
-}
-
-.range-bar {
-    position: absolute;
-    height: 4px;
-    background-color: #ffffff;
-    max-width: 267px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 
 }
-
-.range-toggle {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.range-toggle:hover {
-    background-color: #ffffff;
-}
-
-.range-toggle:active {
-    background-color: #ffffff;
-    outline: 2px solid #83B3D3;
-    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
-}
-
-.range-toggle:focus {
-    background-color: #ffffff;
-    outline: 3px solid #83B3D3;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-/* Оутлайны делаю по макету, но размеры у них одинаковые. 
-Бордер-радиус задал - ничего не изменилось */
-
-.toggle-min {
-    top: -8px;
-    left: -10px;
-}
-
-.toggle-max {
-    top: -8px;
-    right: -10px;
-}
-
-/* Ниже идут импуты со стоимостью */
 
 .range-wrapper-inputs {
     display: flex;
-    margin-bottom: 32px;
-
-}
-
-
-
-.range-input {
-    width: 143px;
-    padding: 0 2px;
-    margin: 0px;
-    font: inherit;
-    background-color: transparent;
-    appearance: textfield;
-    border-color: #ffffff;
-    color: #ffffff;
+    margin-bottom: 28px;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
     appearance: none;
-    margin: 0;
+}
+
+.range-input {
+    width: 144px;
+    font-size: 18px;
+    line-height: 23px;
+    padding: 14px 35px 11px 19px;
+    border: 2px solid #ffffff;
+    background-color: transparent;
+    color: inherit;
+}
+
+.range-input-min,
+.range-input-max {
+    position: relative;
+}
+
+.range-wrapper-inputs .min {
+    border-radius: 4px 0 0 4px;
+    border-right: 1px solid #ffffff;
+}
+
+.range-wrapper-inputs .max {
+    width: 143px;
+    padding-left: 17px;
+    border-radius: 0 4px 4px 0;
+    border-left: 1px solid #ffffff;
+}
+
+.label-min,
+.label-max {
+    position: absolute;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 23px;
+    max-width: 25px;
+    right: 14px;
+    top: 12px;
+}
+
+.label-max {
+    right: 17px;
+}
+
+.range-input:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.range-input:focus-visible {
+    box-shadow: 0 0 0 3px #81b3d2;
+    outline: 3px solid #81b3d2;
+}
+
+.range-input:active {
+    background-color: #756257;
+}
+
+.range-input:disabled {
+    opacity: 1;
+    outline: none;
+}
+
+
+.range-scale {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+}
+
+.range-toggle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+.range-toggle:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus-visible {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    outline: 3px solid #83b3d3;
+    outline-offset: 0;
+}
+
+.range-toggle:active {
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+    outline: 2px solid #83b3d3;
+    outline-offset: 0;
 }
 
 .select-control {
@@ -1160,9 +1258,8 @@ body {
     border-width: 2px;
     border-color: #E6E6E6;
     border-radius: 4px;
-    max-width: 287px;
-    height: 24px;
     margin-right: 81px;
+    padding: 12px 127px 13px 19px;
 }
 
 .sort-button {
@@ -1227,6 +1324,15 @@ body {
 
 .select-bottom {
     display: flex;
+}
+
+.toggle-min {
+    top: -15px;
+}
+
+.toggle-max {
+    top: -15px;
+    right: -185px;
 }
 
 .text-thin-five {
@@ -1296,3 +1402,336 @@ body {
     border-radius: 50px;
     transform: translateX(-6px) translateY(-7px);
 }
+
+.modal-container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(242, 242, 242, 0.5);
+    height: 100%;
+}
+
+/* Прозрачность почему-то только в зоне блока */
+
+.modal {
+    position: relative;
+    margin: auto;
+    padding: 70px;
+    padding-top: 60px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    max-width: 715px;
+    margin-top: 120px;
+}
+
+.modal-title {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 61px;
+}
+
+
+.modal-close-button {
+    position: absolute;
+    top: 54px;
+    right: 70px;
+    padding: 0;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.modal-close-button:hover svg {
+    background-color: #E6E6E6;
+    border-radius: 50%;
+}
+
+.modal-close-button:active svg {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-close-button:focus svg {
+    background-color: #E6E6E6;
+    outline: 3px solid #83b3d3;
+    outline-offset: 0;
+}
+
+.field-group {
+    display: grid;
+    grid-template-columns: 135px 130px 115px 135px;
+    column-gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.date-input-block {
+    grid-column: 2 / 5;
+    display: flex;
+    position: relative;
+}
+
+.visit-date-label,
+.exit-date-label,
+.people-label {
+    font-size: 18px;
+    line-height: 40px;
+    padding: 5px 0;
+    font-weight: 700;
+    grid-column: 1 / 2;
+    align-self: center;
+}
+
+.visit-date,
+.exit-date {
+    width: 100%;
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 700;
+    padding: 0 19px;
+    margin: 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+}
+
+.date-button {
+    position: absolute;
+    right: 19px;
+    padding: 0;
+    margin: 0;
+    top: 35%;
+    border: none;
+    cursor: pointer;
+}
+
+.date-button:focus-visible {
+    border-radius: 4px;
+    outline-offset: 3px;
+    outline: 3px solid #68a2ca;
+}
+
+.date-button:active {
+    border: none;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.warning-date-info,
+.exit-date-info {
+    grid-column: 2/-1;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+
+.input-block-people {
+    grid-column: 2 / 3;
+    display: inline-flex;
+    position: relative;
+}
+
+.people,
+.kids {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    background-color: #F2F2F2;
+    padding-left: 61px;
+    padding-right: 45px;
+}
+
+
+.kids-label-block {
+    grid-column: 3 / 4;
+    align-self: center;
+    position: relative;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 32px;
+}
+
+.kids-label {
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.input-block-kids {
+    grid-column: 4 / -1;
+    position: relative;
+}
+
+.minus {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 19px;
+    top: 50%;
+}
+
+.plus {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    right: 19px;
+    top: 36%;
+}
+
+
+.visit-date:hover,
+.exit-date:hover,
+.people:hover,
+.kids:hover {
+    background-color: #e6e6e6;
+}
+
+.visit-date:focus-visible,
+.exit-date:focus-visible,
+.people:focus-visible,
+.kids:focus-visible {
+    background-color: #e6e6e6;
+    outline: 3px solid #83b3d3;
+}
+
+.visit-date:active,
+.exit-date:active,
+.people:active,
+.kids:active {
+    background-color: #ffffff;
+    outline: 2px solid #000000;
+    outline-offset: -2px;
+}
+
+.visit-date:disabled,
+.exit-date:disabled,
+.people:disabled,
+.kids:disabled {
+    background-color: #aaaaaa;
+    border-color: #aaaaaa;
+    outline: none;
+}
+
+.error-message {
+    color: #FF5757;
+}
+
+.minus:hover,
+.plus:hover {
+    color: #000000;
+}
+
+.minus:focus,
+.plus:focus {
+    color: #000000;
+    border-radius: 4px;
+    outline-offset: 3px;
+    outline: 3px solid #68a2ca;
+}
+
+.minus:active,
+.plus:active {
+    border: none;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+
+.tooltip {
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.tooltip-info {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #83b3d3;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.tooltip-icon {
+    width: 100%;
+    color: #ffffff;
+}
+
+.tooltip-text {
+  
+    position: absolute;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 19px 18px 24px 22px;
+    border-radius: 10px;
+    width: 256px;
+    right: -118px;
+    top: 100%;
+    margin-top: 15px;
+    background-color: #333333;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    display: none;
+}
+
+
+.tooltip-info:hover {
+    background-color: #68a2ca;
+}
+
+.tooltip-info:focus,
+.tooltip-info:focus-visible {
+    background-color: #68a2ca;
+    outline: none;
+}
+
+.tooltip-info:hover+.tooltip-text,
+.tooltip-info:focus+.tooltip-text {
+    display: block;
+}
+
+.lost-button {
+    background-color: #83B3D3;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0;
+    margin-top: 40px;
+    padding: 10px;
+    max-width: 575px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+
+.lost-button:hover {
+    background-color: #68a2ca;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.lost-button:focus-visible {
+    outline: 3px solid #756257;
+    outline-offset: 0;
+}
+
+.lost-button:disabled {
+    outline: none;
+    cursor: default;
+}
+
+ .modal-container-close {
+    display: none;
+  }
+ 
