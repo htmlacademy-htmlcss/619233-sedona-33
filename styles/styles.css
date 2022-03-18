@@ -310,10 +310,6 @@ body {
 }
 
 
-
-/* Что не так? Фокус идет только по нажатой кнопке (второй столбец "Тип жилья")
-  А по первому столбцу идет по всем пунктам.*/
-
 .control-input[type="checkbox"]:checked+.control-mark::before {
     position: absolute;
     width: 20px;
@@ -507,8 +503,6 @@ body {
 
 }
 
-/* cccccccccccccccccccccccccccccccccccccccccccccccccc */
-
 .hotel-price {
     font-size: 18px;
     line-height: 23px;
@@ -543,8 +537,8 @@ body {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
-    padding-top: 91px;
-    padding-bottom: 29px;
+    padding-top: 55px;
+    padding-bottom: 31px;
     margin: 0;
     text-decoration: none;
     text-transform: uppercase;
@@ -559,7 +553,6 @@ body {
 
 }
 
-/* Еще хотел спросить, как открывать поиск по тегу в WS-Код? */
 
 .injection-svg {
     fill: #ffffff;
@@ -583,8 +576,6 @@ body {
     fill: rgba(117, 98, 87, 1);
 }
 
-/* при нажатии появляется голубая рамка. КАК?  */
-
 .logo-html:focus svg {
     fill: #756257;
     border: 3px solid #83B3D3;
@@ -592,9 +583,6 @@ body {
     border-radius: 10px;
 }
 
-/* Делаю оутлайн как в предыдущ примерах
-рамка становится черной. задаю бордеры, появляется синяя рамка, но черная осталась
-как так? */
 
 .main-container {
     flex-grow: 1;
@@ -624,7 +612,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 264px;
+    max-width: 253px;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -641,6 +629,12 @@ body {
     left: 0;
     margin: auto;
     fill: #000000;
+}
+
+.navigation-icons {
+    padding: 0px;
+    margin: 0px;
+
 }
 
 .navigation-logo-sedona {
@@ -680,7 +674,8 @@ body {
     display: flex;
     line-height: 24px;
     text-decoration: none;
-    min-width: 16px;
+    min-width: 29px;
+    max-height: 34px;
 }
 
 .navigation-user-link:hover svg {
@@ -696,7 +691,7 @@ body {
     border: 0;
     justify-content: center;
     align-items: center;
-    padding-top: 9px;
+    padding-top: 10px;
     padding-bottom: 8px;
     min-width: 160px;
     width: 100%;
@@ -764,14 +759,10 @@ body {
 .item-title {
     font-size: 24px;
     line-height: 28px;
-    margin: 0 0 20px 0;
+    margin: 1px 0 19px 0;
+    padding: 0px;
     text-transform: uppercase;
     color: #333333;
-}
-
-.item-title-white {
-    margin: 0 0 25px 0;
-    color: #ffffff;
 }
 
 .advantages-text {
@@ -783,15 +774,33 @@ body {
     text-align: center;
 }
 
+.advantages-number {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 19px 0 22px 0;
+}
+
+.item-title-white {
+    padding: 0;
+    margin: 10px 0 9px 0;
+    color: #ffffff;
+}
+
+
 .advantages-text-blue {
     color: #ffffff;
     max-width: 220px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 21px;
 }
 
 .advantages-number {
     font-size: 18px;
     line-height: 21px;
-    margin: 0 0 26px 0;
+    margin: 19px 0 22px 0;
 }
 
 .advantages-icon {
@@ -950,8 +959,6 @@ body {
     color: #000000;
 }
 
-/* cccccccccccccccccccccccccccccccccccccccccccccccccccc */
-
 .product-card-button-brown {
     background: #756257;
     color: #ffffff;
@@ -1100,6 +1107,36 @@ body {
     margin-bottom: 34px;
 }
 
+
+.item-title-white-two {
+    padding: 0;
+    margin: 20px 0 10px 0;
+    color: #ffffff;
+    line-height: 15px;
+}
+
+
+.advantages-number-white-two {
+    font-size: 18px;
+    line-height: 21px;
+    margin: 25px 0 20px 0;
+    padding: 0px;
+}
+
+
+.advantages-text-blue-two {
+    color: #ffffff;
+    max-width: 220px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+
+
+
 /* Рейтинг */
 
 .rating {
@@ -1133,7 +1170,6 @@ body {
     padding: 10px 20px;
 }
 
-/* упр */
 
 .range {
     display: flex;
@@ -1339,7 +1375,7 @@ body {
     color: #333333;
     font-weight: 400;
     text-align: center;
-    margin: 31px 240px 80px 240px;
+    margin: 0px 240px 80px 240px;
     padding: 0;
     line-height: 36px;
     font-size: 22px;
@@ -1410,8 +1446,6 @@ body {
     background-color: rgba(242, 242, 242, 0.5);
     height: 100%;
 }
-
-/* Прозрачность почему-то только в зоне блока */
 
 .modal {
     position: relative;
@@ -1668,7 +1702,7 @@ body {
 }
 
 .tooltip-text {
-  
+
     position: absolute;
     font-size: 16px;
     line-height: 20px;
@@ -1731,7 +1765,6 @@ body {
     cursor: default;
 }
 
- .modal-container-close {
+.modal-container-close {
     display: none;
-  }
- 
+}
