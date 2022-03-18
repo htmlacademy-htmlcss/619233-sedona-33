@@ -209,6 +209,139 @@
       </div>
     </footer>
   </div>
+
+
+  <!-- модальное окно -->
+
+  <div class="modal-container modal-container-close">
+    <div class="modal">
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+        <svg width="53" height="53" viewBox="0 0 53 53" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="26.5" cy="26.5" r="26.5" fill="#F2F2F2" />
+          <path d="M33 21.2 31.8 20l-5.3 5.3-5.3-5.3-1.2 1.2 5.3 5.3-5.3 5.3 1.2 
+          1.2 5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3 5.3-5.3Z" />
+        </svg>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group">
+
+
+            <label class="visit-date-label" for="visit-date">Дата заезда:</label>
+            <span class="date-input-block">
+              <input class="visit-date" id="visit-date" type="text" name="visit-date" value="27 апреля 2020">
+              <button class="date-button" type="button">
+                <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity=".3">
+                    <path d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z" />
+                    <path d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 
+                    0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z" />
+                    <path
+                      d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 
+                    .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 
+                    10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 
+                    11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 
+                    10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+                  </g>
+                </svg>
+              </button>
+            </span>
+            <span class="warning-date-info error-message">Мы не можем отправить вас в прошлое.</span>
+          </p>
+
+
+          <p class="field-group">
+            <label class="exit-date-label" for="exit-date">Дата выезда:</label>
+
+            <span class="date-input-block">
+
+
+              <input class="exit-date" id="exit-date" type="text" name="exit-date" value="1 сентября 2021">
+              <button class="date-button" type="button">
+
+                <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity=".3">
+                    <path d="M5.5 10c.3 0 .5-.2.5-.5S5.8 9 5.5 9s-.5.2-.5.5.2.5.5.5Z" />
+                    <path d="M14 2h-2V0h-1v2H4V0H3v2H1c-.6 0-1 .4-1 1v11c0 .5.4 1 1 1h13c.5 
+                    0 1-.5 1-1V3c0-.6-.5-1-1-1Zm0 12H1V7h13v7ZM1 6V3h2v2h1V3h7v2h1V3h2v3H1Z" />
+                    <path
+                      d="M7.5 10c.3 0 .5-.2.5-.5S7.8 9 7.5 9s-.5.2-.5.5.2.5.5.5ZM9.5 10c.3 0 
+                    .5-.2.5-.5S9.8 9 9.5 9s-.5.2-.5.5.2.5.5.5ZM5.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM3.5 
+                    10c.3 0 .5-.2.5-.5S3.8 9 3.5 9s-.5.2-.5.5.2.5.5.5ZM3.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM7.5 
+                    11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM9.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5ZM11.5 
+                    10c.3 0 .5-.2.5-.5s-.2-.5-.5-.5-.5.2-.5.5.2.5.5.5ZM11.5 11c-.3 0-.5.2-.5.5s.2.5.5.5.5-.2.5-.5-.2-.5-.5-.5Z" />
+                  </g>
+                </svg>
+
+              </button>
+            </span>
+            <span class="exit-date-info">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+
+          <p class="field-group">
+            <label class="people-label" for="people">Взрослые:</label>
+
+
+            <span class="input-block-people">
+
+
+              <svg class="minus" width="13" height="1" viewBox="0 0 13 1" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path opacity=".3" d="M0 0v1h13V0H0Z" fill="#000" />
+              </svg>
+
+              <input class="people" id="people" type="number" name="people" value="2">
+
+              <svg class="plus" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" fill="#000" opacity=".3" />
+              </svg>
+
+            </span>
+
+            <span class="kids-label-block">
+
+
+              <label class="kids-label" for="kids">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-info" type="button">
+                  <svg class="tooltip-icon" width="1" height="9" viewBox="0 0 1 9" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)" fill="#fff">
+                      <path d="M0 9h1V3H0v6ZM1 0H0v1h1V0Z" />
+                    </g>
+                    <defs>
+                      <clipPath>
+                        <path fill="#fff" d="M0 0h1v9H0z" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-id">Укажите количество детей, которые будут с
+                  вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </span>
+
+            <span class="input-block-kids">
+
+              <svg class="minus" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg">
+                <path opacity=".3" d="M0 0v1h13V0H0Z" fill="#000" />
+              </svg>
+
+              <input class="kids" id="kids" type="number" name="kids" value="1">
+
+              <svg class="plus" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z" opacity=".3" />
+              </svg>
+
+            </span>
+          </p>
+          <!-- КНОПКА НАЙТИ -->
+          <button class="lost-button" type="submit">Найти</button>
+        </form>
+      </section>
+    </div>
+  </div>
 </body>
 
 </html>
