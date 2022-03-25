@@ -2044,7 +2044,6 @@ body {
     content: "";
   }
 
-    /* modal-close-container {
+.modal-close-container {
     display: none;
-  } */
-  
+  } 
