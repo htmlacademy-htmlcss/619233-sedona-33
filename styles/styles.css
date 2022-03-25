@@ -415,7 +415,7 @@ body {
 .control-input-an[type="radio"]:checked+.control-mark-circle::before {
     position: absolute;
     content: "";
-    background-image: url("../images/Ellipse-hotel.svg");
+    background-image: url("../images/ellipse-hotel.svg");
     top: 5px;
     width: 10px;
     height: 10px;
